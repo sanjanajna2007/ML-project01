@@ -10,11 +10,7 @@ data={
 }
 
 df=pd.DataFrame(data)
-#print(df)
-#print(df.head(2))
-#print(df.shape)
-#print(df.info)
-#print(df.columns)
+
 
 X=df[["study_hours","attendence","sleep_hours","previous_marks"]]
 Y=df["final_marks"]
@@ -35,3 +31,26 @@ print(Y_train)
 
 print("testing data: ")
 print(y_test)
+
+from sklearn.linear_model import LinearRegression
+model=LinearRegression()
+model.fit(X_train,Y_train)
+
+model.predict(X_test)
+Y_predict = model.predict(X_test)
+
+#using  MSE which is mean squared erroe
+from sklearn.metrics import mean_squared_error,mean_absolute_error,root_mean_squared_error
+import math
+
+mae=mean_absolute_error(y_test, Y_predict)
+mse=mean_squared_error(y_test,Y_predict)
+rmse=math.sqrt(mse)
+print("MSE:",mse)
+print("MAE:",mae)
+from sklearn.metrics import r2_score
+r2=r2_score(y_test,Y_predict)
+print("r2: ",r2)
+print("RMSE:",rmse)
+
+
