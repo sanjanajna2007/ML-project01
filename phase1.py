@@ -1,11 +1,12 @@
 import pandas as pd
 
 data={
-    "study_hours" : [4,5,3,2],
-    "attendence" : [12,45,87,56],
-    "sleep_hours" : [2,6,7,8],
-    "previous_marks" : [45,56,15,78],
-    "final_marks" : [78,56,89,98],
+    "study_hours" : [4,5,3,2,52,67],
+    "attendence" : [12,45,87,56,45,34],
+    "sleep_hours" : [2,6,7,8,34,45],
+    "previous_marks" : [45,56,15,78,34,56],
+    
+    "final_marks" : [78,56,89,98,34,45],
 
 }
 
